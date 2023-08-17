@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="heading">Hi, I Am</h1>
+        <h1 class="heading">Paul Cedric Tagulao Molina</h1>
+        <br><br>
+        <p>AND I'm a IT STUDENT </p>
+    </section>
+
+    <section id="portfolio">
+        <h1 class="heading">Portfolio</h1>
+        <div class="gallery">
+            <img src="image.jpg" alt="">
+            <img src="imagee.jpg" alt="">
+            <img src="imageee.jpg" alt="">
+            <img src="imageeee.jpg" alt="">
+            <img src="imageeeee.jpg" alt="">
+            <img src="imaged.jpg" alt="">
+            <img src="imagedd.jpg" alt="">
+
+        </div>
+    </section>
+
+    <section id="education">
+        <h1 class="heading">Education</h1>
+        <div class="columns">
+            <div class="box">
+                <h2>University Of Pangasinan in Dagupan City Pangsinan</h2>
+                <p>Bachelor of Information technology Major is 
+                Website Development College life is an IT major in 
+                University Of Pangasinan majoring web technology
+                , is an exciting and dynamic experience.
+                </p>
+            </div>
+            <div class="box">
+                <h2>Master of Information technology</h2>
+                <p>Master of Information technology of the 
+                Website Development and other things.As a student program, 
+                you are immersed in a vibrant 
+                learning environment where you gain in-depth knowledge 
+                and skills in the field of IT, with a specific focus on 
+                web and mobile technologies.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="about">
+        <h1 class="heading">About me</h1>
+        <div class="about">
+            <img src="pmm.jpg" alt="My Pic">
+            <div class="name">
+                <h2>I'm Paul Cedric Molina</h2>
+                <p>As a web developer, I am excited to embark on
+                 my journey in the dynamic and ever-changing world
+                of web development. I am passionate about creating
+                websites that are not only aesthetically pleasing
+                but also functional and user-friendly. Although
+                I may not have years of experience under my belt,
+                I am eager to learn and am always up for a challenge. 
+                I believe in the power of collaboration and am eager 
+                to work with other developers, designers, and clients 
+                to create websites that meet their specific needs and 
+                goals. I am committed to delivering high-quality work 
+                and am dedicated to ensuring that every project I work 
+                on is a success.But im willing to practice more.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+        <h1 class="heading">Contact</h1>
+        <form onsubmit="sendEmail(); reset(); return false">
+            <input type="text" name="name" class="input" placeholder="Enter Your Name">
+            <input type="email" name="email" class="input" placeholder="Enter Your Email">
+            <textarea name="message" id="message" cols="70" rows="20" placeholder="Enter Your Message"></textarea>
+            <input type="submit" Value="Sumbit" id="submit">
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                secureToken: "288a4982-d0ed-4795-8e72-93f20bef6e32",
+                Host : "smtp.gmail.com",
+                Username : "paulmolina2507@gmail.com",
+                Password : "aiypwzqpjcnraud1",
+                To : 'paulmolina2525@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form Enquiry",
+                Body : "Name: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone no: " + document.getElementById("phone").value
+                    + "<br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert("Message Sent Succesfully")
+            );
+        }
+    </script>
+    </section>
+
+</body>
+</html>
